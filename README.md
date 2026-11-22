@@ -23,7 +23,8 @@ The HPE utility is distributed separately and is not included in this repository
 
 From the project folder, run in Powershell:
 
-```python -m venv .venv
+```
+python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
 .\.venv\Scripts\python GUI_iLO_Script.py
 ```
