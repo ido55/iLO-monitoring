@@ -1,13 +1,14 @@
 # iLO Monitoring Script
 
-A Windows desktop application for collecting hardware health information from HPE iLO interfaces. It uses the HPE `hpqlocfg` utility to query a list of servers, tracks collection progress, matches IP addresses to site names, and exports the results to a formatted Excel workbook.
+A Windows desktop application for collecting hardware health information from HPE iLO interfaces. 
+Uses the HPE `hpqlocfg` utility to query a list of servers, tracks collection progress, matches IP addresses to site names, and exports the results to a formatted Excel workbook.
 
 ## Features
 
-- Collects server identity, firmware, and component health status.
+- Collects server identity, firmware, and component health status (fan status, temperature etc.).
 - Shows per-server progress and collection errors in a Tkinter interface.
 - Associates each iLO address with a site name.
-- Exports results to `.xlsx`; exports CSV if the Excel writer is unavailable.
+- Exports results to an `.xlsx` file.
 - Includes an offline preview using synthetic data.
 
 ## Requirements
@@ -20,13 +21,13 @@ The HPE utility is distributed separately and is not included in this repository
 
 ## Setup and launch
 
-From the project folder, run:
+From the project folder, run in Powershell:
 
-```powershell
+----------------------------------------------------------
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
 .\.venv\Scripts\python GUI_iLO_Script.py
-```
+----------------------------------------------------------
 
 The application opens a desktop window. Select your target list and site map, enter the iLO account credentials, and click **Start Process**. When collection finishes, click **Export to Excel**. Reports and collector logs are saved in the `reports` folder.
 
